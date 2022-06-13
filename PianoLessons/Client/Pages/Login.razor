@@ -1,0 +1,21 @@
+﻿@page "/Account/Login"
+
+<EditForm Model="@loginRequest" OnValidSubmit="@HandleLogin">
+    <div class="register-page">
+        <div class="register-card">
+            <h3>Login</h3>
+
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <InputText id="name" @bind-Value="loginRequest.UserName" placeholder="Username"/>
+            </div>
+            <div class="form-group">
+                <InputText id="name" @bind-Value="loginRequest.Password" placeholder="Password"/>
+            </div>
+
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</EditForm>

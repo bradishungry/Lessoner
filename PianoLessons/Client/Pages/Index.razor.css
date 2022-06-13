@@ -1,0 +1,32 @@
+﻿.banner {
+    background: rgba(0, 0, 0, 0.7) url('images/banner.jpg');
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200vh;
+    width: 100%;
+    z-index: -1;
+    background-blend-mode: darken;
+    transform: translateY(-50%);
+}
+
+.summary {
+    background-color: white;
+    padding: 24px;
+    display: flex;
+}
+
+.description {
+    padding: 10vw;
+    font-size: 1.2em;
+    font-weight: 300;
+    width: 100%
+}
+
+.banner-content {
+    color: white;
+    padding: 10vw;
+    font-size: 1.2em;
+    font-weight: 300;
+    width: 100%
+}

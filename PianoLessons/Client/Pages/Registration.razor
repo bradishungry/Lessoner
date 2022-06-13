@@ -1,0 +1,39 @@
+﻿@page "/Account/Registration"
+
+<EditForm Model="@registerRequest" OnValidSubmit="@HandleRegisterRequest">
+    <div class="register-page">
+        <div class="register-card">
+            <h3>Register</h3>
+
+            <DataAnnotationsValidator />
+
+            <div class="form-group">
+                <InputText id="name" @bind-Value="registerRequest.UserName" placeholder="Username"/>
+            </div>
+            <div class="form-group">
+
+                <InputText id="name" @bind-Value="registerRequest.Email" placeholder="Email"/>
+            </div>
+            <div class="form-group">
+
+                <InputText id="name" @bind-Value="registerRequest.ConfirmEmail" placeholder="Confirm Email" />
+            </div>
+            <div class="form-group">
+                <InputText id="name" @bind-Value="registerRequest.Password" placeholder="Password"/>
+            </div>
+            <div class="form-group">
+                <InputText id="name" @bind-Value="registerRequest.ConfirmPassword" placeholder="Confirm Password"/>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    Are you a teacher?
+            <InputCheckbox @bind-Value="registerRequest.IsTeacher"></InputCheckbox>
+                            </label>
+            </div>
+
+            <ValidationSummary />
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</EditForm>
